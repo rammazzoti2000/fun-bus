@@ -1,0 +1,27 @@
+// Mixins in here
+.custom-btn(@justify, @align) {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: @justify;
+    align-content: @align;    
+}
+
+.btn {
+    .custom-btn(center, center); 
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 2rem;   
+    background: @button-bg;
+    color: @main-bg; 
+    @media @mobile {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    &:hover {
+        // The compiled color returned is #006667 
+        background-color: darken(#17A2B8, 5%);
+        cursor: pointer; 
+      }   
+}

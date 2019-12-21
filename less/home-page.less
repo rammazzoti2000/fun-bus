@@ -1,0 +1,119 @@
+.mobile-version-content (@justify, @align){
+  display: flex;
+  flex-flow: column;
+  justify-content: @justify;
+  align-content: @align;
+}
+
+.mobile-version-invert (@justify, @align){
+  display: flex;
+  flex-flow: column-reverse;
+  justify-content: @justify;
+  align-content: @align;
+}
+
+.home {
+
+    @media @mobile {
+      width: 90%;
+    }
+
+   header {
+    .header-image {
+      margin-bottom: 30px;
+    }    
+  }
+
+  .content-section {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media @mobile {
+      .mobile-version-content(center, center);
+      width: 100%;
+      margin: 30px auto;
+    }
+   
+    
+    .text-content {
+      width: 48%;
+      padding-right: 1%;
+      @media @mobile {
+        width: 100%;
+
+      }
+    }
+
+    .img-content {
+      width: 48%;
+      padding-left: 1%;
+      @media @mobile {
+        width: 100%;
+      }
+
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .inverse-content {
+    padding-bottom: 30px;
+    border-bottom: 2px dashed @navigation-border;
+    @media @mobile {
+      .mobile-version-invert(center, center);
+      
+    }
+
+    .text-content {
+      padding-left: 1%;
+      padding-right: 0;
+      @media @mobile {
+        width: 100%;
+      }
+    }
+
+    .img-content {
+      padding-right: 1%;
+      padding-left: 0;
+      @media @mobile {
+        width: 100%;
+      }
+    }
+  }
+
+  .content-destination {
+    width: 75%;
+    margin: 0 auto 30px;
+    @media @mobile {
+      width: 100%;
+    }
+
+    img {
+      border-radius: 10px;
+    }
+  }
+
+  .content-pick {
+    padding-top: 10px;
+    border-top: 2px dashed @navigation-border;
+    display: flex;
+    justify-content: space-between;
+    @media @mobile {
+      .mobile-version-content(center, center);
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .destination {
+      width: 30%;
+      margin-bottom: 30px;
+      @media @mobile {
+        .mobile-version-content(center, center);
+        width: 80%;
+        margin: 20px auto;
+      }
+    }
+  }
+}// home
