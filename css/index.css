@@ -232,7 +232,7 @@ img {
 }
 @media (max-width: 500px) {
   #nav-outer #nav .nav-elem {
-    width: 90%;
+    width: 100%;
     text-align: center;
     display: flex;
     flex-flow: row wrap;
@@ -268,7 +268,7 @@ img {
 }
 @media (max-width: 500px) {
   .home {
-    width: 80%;
+    width: 90%;
   }
 }
 .home header .header-image {
